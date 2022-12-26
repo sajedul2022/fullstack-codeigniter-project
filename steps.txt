@@ -1,0 +1,42 @@
+----------- \fullstack-codeigniter-project -------------
+1. AdminLTE download
+2. htdocs/fullstack-codeigniter-project
+3.composer create-project codeigniter4/appstarter backend
+4. CREATE DATABASE fullstack-codeigniter-project
+5. .env file config and 
+6. php spark serve
+7. php spark make:controller dashboard  // make controller
+8. set default controller, Routes
+
+** go to backend\app\Config\Routes.php
+
+            $routes->setDefaultController('Dashboard');
+            $routes->setAutoRoute(true);
+
+            // setDefaultController
+            $routes->get('/', 'Dashboard::index');
+
+9. dist,plugins folder from adminLte to public/assets folder
+10. copy code to admin_home.php & update path
+11. templating dashboard.php
+12. migration for Products      php spark make:migration Products   then cli 
+    php spark migrate
+    php spark migrate:refresh
+
+13. Model for Products          php spark make:model ProductModel
+    protected $allowedFields    = ['product_name','product_details','product_price'];
+
+14. controller for Products     php spark make:controller Products --restful
+15. go to controller file and import
+
+        use App\Models\ProductModel;
+
+    public function index(){
+        $model = new ProductModel();
+        $data = $model->findAll();
+        print_r($data);
+    }
+
+16. routes set for Products
+    php spark routes
+    see all resource restful controller for Products
