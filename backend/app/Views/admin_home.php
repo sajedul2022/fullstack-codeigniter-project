@@ -7,7 +7,7 @@
 <?php echo  view('layouts/left_sidebar.php'); ?>
 
 
- <!-- Left sidebar nav -->
+ <!-- content nav -->
 <?php echo  view('layouts/content.php'); ?>
   
  

@@ -1,4 +1,7 @@
 ----------- \fullstack-codeigniter-project -------------
+
+                     ------ Class 01 ------
+
 1. AdminLTE download
 2. htdocs/fullstack-codeigniter-project
 3.composer create-project codeigniter4/appstarter backend
@@ -40,3 +43,103 @@
 16. routes set for Products
     php spark routes
     see all resource restful controller for Products
+    and crud make
+
+                    ------------- class 02 -------------
+1. make seeder
+    php spark make:seeder productSeeder
+go to  backend\app\Database\Seeds\ProductSeeder.php
+
+     $datas = [
+            [
+                'product_name'      => 'Black Jacket',
+                'product_details'   => 'Cloths',
+                'product_price'   => '2000',
+            ],
+            [
+                'product_name'      => 'Shirt',
+                'product_details'   => 'Cloths',
+                'product_price'   => '1200',
+            ],
+        ];
+
+        // Simple Queries
+        // $this->db->query('INSERT INTO users (username, email) VALUES(:username:, :email:)', $data);
+
+        // Using Query Builder
+
+        foreach($datas as $data){
+            $this->db->table('products')->insert($data); 
+        }
+
+    Than cli 
+    php spark db:seed productSeeder
+
+2. Add new product
+
+** backend\app\Controllers\Products.php
+
+    public function new(){
+        return view("product/product_entry");
+    }
+
+** create view page product_entry.php
+    and form create ...
+
+    <form method="post" action="<?= base_url('products/create')?>" >
+    ....
+
+**  backend\app\Controllers\Products.php
+
+    public function create(){
+
+        $validate = $this->validate([
+            'product_name' => 'required|min_length[5]|max_length[10]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required',
+        ]);
+
+        if(!$validate){
+           return view('product/product_entry', ['validation' => $this->validator]);
+        }else{
+            $model = new ProductModel();
+            $data = $this->request->getPost();
+            $model->save($data);
+            return redirect()->to('/products');
+        }
+
+
+    }
+
+** for set value in form Controllers\Products.php
+
+    function __construct(){
+            helper(['form', 'url']);
+        }
+** in form
+    value="<?= set_value('product_name') ?>"
+
+        ## Errro message show  ## 
+        $validation->getErrors() // all errors
+        $validation->getError() // single errors
+
+                            if(isset($validation)){
+                                $errors = $validation->getErrors();
+                                    if(count($errors)> 0){
+                                        echo "<ul>";
+                                            foreach($errors as $err){
+                                                echo "<li> $err </li>";
+                                            }
+                                        echo "</ul>";
+                                    }
+                            }
+
+** each field set
+<span class="text-danger" >
+            <?php 
+                if(isset($validation)){
+                    $error = $validation->getError('product_price');
+                    echo $error;
+                }
+            ?>
+</span>

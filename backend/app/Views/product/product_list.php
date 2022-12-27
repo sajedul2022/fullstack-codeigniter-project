@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <!-- <h1 class="m-0">Dashboard</h1> -->
+                    <h1 class="m-0"><a class="btn btn-success"  href="/products/new"> Add New Product </a> </h1>
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
@@ -65,13 +65,13 @@
                                     <tr>
                                         <td> <?php echo $product['id'] ?> </td>
                                         <td> <?php echo $product['product_name'] ?> </td>
-                                        <td><?php echo $product['product_details'] ?>/td>
+                                        <td><?php echo $product['product_details'] ?></td>
                                         <td> <?php echo $product['product_price'] ?> </td>
                                         <td>  
-                                            <a class="btn btn-primary" href="">
+                                            <a class="btn btn-primary" href="/products/edit/<?= $product['id'] ?>">
                                                 <i class="fa fa-pen" ></i> &nbsp
                                             </a>  
-                                            <a class="btn btn-danger" href="/products/delete/<?= $product['id'] ?>"">
+                                            <a class="btn btn-danger" href="products/delete/<?= $product['id'] ?>">
                                                 <i class="fa fa-trash" ></i>
                                             </a>
 
