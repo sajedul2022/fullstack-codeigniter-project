@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0"><a class="btn btn-success"  href="/products/new"> Add New Product </a> </h1>
+                    <h1 class="m-0"><a class="btn btn-primary"  href="/products/new"> Add New Product </a> </h1>
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
@@ -23,6 +23,16 @@
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Products</li>
                     </ol>
+
+                    <!-- Seesion msg -->
+                    <?php
+                    
+                        if(session()->has('msg')): ?>
+                            <div class="alert alert-success">
+                                <?= session()->msg; ?>
+                            </div>
+                    <?php endif; ?>
+
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -68,7 +78,7 @@
                                         <td><?php echo $product['product_details'] ?></td>
                                         <td> <?php echo $product['product_price'] ?> </td>
                                         <td>  
-                                            <a class="btn btn-primary" href="/products/edit/<?= $product['id'] ?>">
+                                            <a class="btn btn-primary" href="<?= site_url("products/edit/".$product['id']) ?>">
                                                 <i class="fa fa-pen" ></i> &nbsp
                                             </a>  
                                             <a class="btn btn-danger" href="products/delete/<?= $product['id'] ?>">

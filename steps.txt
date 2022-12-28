@@ -143,3 +143,165 @@ go to  backend\app\Database\Seeds\ProductSeeder.php
                 }
             ?>
 </span>
+
+---------------------------------------------------------------------------------------------------------------
+
+                        ------------- class 03 edit update -------------
+
+1. public function edit($id = null){
+
+        $model = new ProductModel();
+        $data['product'] = $model->find($id);
+        return view('product/product_edit', $data);
+    }
+
+2. 
+    public function update($id = null){
+
+        $validate = $this->validate([
+            'product_name' => 'required|min_length[5]|max_length[15]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required',
+        ]);
+
+        if(!$validate){
+            return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
+        }else{
+            $model = new ProductModel();
+            $data = [
+                'product_name' => $this->request->getVar('product_name'),
+                'product_details'  => $this->request->getVar('product_details'),
+                'product_price'  => $this->request->getVar('product_price'),
+            ];
+            $model->update($id, $data);
+            return $this->response->redirect(site_url('/products'));
+        }
+
+    }
+
+   
+                            ---------- validation Edit Page ---------------------
+
+** controller
+$validate = $this->validate([
+            'product_name' => 'required|min_length[5]|max_length[15]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required',
+        ]);
+
+        if(!$validate){
+            return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
+        }
+
+** product_edit.php
+up from
+     <?php 
+        $errors =  [];
+            if(session()->has('errors')){
+                $errors =  session()->errors;
+            }
+    ?>
+
+** input field inside value
+
+    value="<?= old('product_name') ? old('product_name') : $product['product_name']?>"
+
+
+** input field outside
+
+    <span class="text-danger" >
+        <?=isset($errors['product_price']) ? $errors['product_price'] : ""?>
+    </span>
+
+
+
+
+** product controller 
+
+    update(){
+
+        return redirect()->to('/products')->with('msg', 'Update Successfully');
+    }
+
+
+** confirmation message product_list.php
+    // Seesion msg
+        <?php
+        
+            if(session()->has('msg')): ?>
+
+                <div class="alert alert-success">
+                    <?= session()->msg; ?>
+                </div>
+                
+        <?php endif; ?>
+
+
+             ---------- Add new Product: validation and Success message ---------------------
+
+1. go to controller 
+
+    public function create(){
+
+        $rules = [
+            'product_name' => 'required|min_length[5]|max_length[15]',
+            'product_details' => 'required|min_length[10]',
+            'product_price' => 'required|numeric',
+        ];
+
+        $errors = 
+            [
+                'product_name' => [
+                    'required' => 'Product Name Must be fill',
+                    'min_length' => 'Minimum Length 5',
+                    'max_length' => 'Maximum Length 15',
+                ],
+                'product_details' => [
+                    'required' => 'Product Details Must be fill',
+                    'max_length' => 'Maximum Length 5',
+                ],
+                'product_price' => [
+                    'required' => 'Product Price Must be fill',
+                    'numeric' => 'Price Must be Number'
+                ],
+        ];
+
+        $validation = $this->validate($rules, $errors);
+        
+        if(!$validation){
+            return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
+        }else{
+                $model = new ProductModel();
+                $data = $this->request->getPost();
+                $model->save($data);
+                return redirect()->to('/products')->with('msg', 'Created Successfully');
+            }
+
+
+    }
+    
+
+2. product_entry.php
+
+    <!-- Seesion msg -->
+    <?php           
+            if(session()->has('msg')): ?>
+            <div class="alert alert-success">
+                <?= session()->msg; ?>
+            </div>
+    <?php endif; ?>
+
+      <!-- error session store -->
+        <?php 
+            $errors =  [];
+            if(session()->has('errors')){
+                $errors =  session()->errors;
+            }
+        ?>
+
+
+    value="<?php echo old('product_name') ?>" >
+
+    <span class="text-danger" >
+        <?=isset($errors['product_name']) ? $errors['product_name'] : ""?>
+    </span>
