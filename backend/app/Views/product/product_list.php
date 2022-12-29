@@ -65,18 +65,28 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Product Name</th>
+                                        <th>Category</th>
                                         <th>Details</th>
                                         <th>Price</th>
+                                        <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach($products as $product) : ?>
+                                        
                                     <tr>
                                         <td> <?php echo $product['id'] ?> </td>
                                         <td> <?php echo $product['product_name'] ?> </td>
+                                        <?php foreach($cats as $cat) : ?>
+                                            <td> <?php echo $cat['cat_name'] ?> </td>
+                                        <?php endforeach?>                          
+
                                         <td><?php echo $product['product_details'] ?></td>
                                         <td> <?php echo $product['product_price'] ?> </td>
+                                        <td>  
+                                            <img width="100"  src="<?= $product['product_image'] ?>" alt="image">
+                                        </td>
                                         <td>  
                                             <a class="btn btn-primary" href="<?= site_url("products/edit/".$product['id']) ?>">
                                                 <i class="fa fa-pen" ></i> &nbsp

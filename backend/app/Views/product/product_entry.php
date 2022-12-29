@@ -58,7 +58,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start --> 
-                        <form method="post" action="<?= base_url('products/create')?>" >
+                        <form method="post" action="<?= base_url('products/create')?>" enctype="multipart/form-data" >
                             
                             <div class="card-body">
                                 <div class="form-group">
@@ -67,7 +67,16 @@
                                     <span class="text-danger" >
                                         <?=isset($errors['product_name']) ? $errors['product_name'] : ""?>
                                     </span>
-                                    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Category</label>
+                                    <select name="product_category" class="form-control">
+                                        <option value="" selected disabled > Select One</option>
+                                        <?php foreach($cats as $cat) : ?>
+                                            <option value="<?= $cat['id']; ?>" > <?= $cat['cat_name']; ?> </option>
+                                        <?php endforeach; ?>
+                                    </select> 
                                 </div>
 
                                 <div class="form-group">
@@ -90,6 +99,17 @@
                                     </span>
 
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Image</label>
+                                    <input name="product_image" type="file" class="form-control" id="exampleInputEmail1"  value="<?= old('product_image') ?>">
+
+                                    <span class="text-danger" >
+                                        <?=isset($errors['product_image']) ? $errors['product_image'] : ""?>
+                                    </span>
+
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
 

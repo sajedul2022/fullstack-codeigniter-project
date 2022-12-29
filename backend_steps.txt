@@ -48,6 +48,7 @@
                     ------------- class 02 -------------
 1. make seeder
     php spark make:seeder productSeeder
+
 go to  backend\app\Database\Seeds\ProductSeeder.php
 
      $datas = [
@@ -305,3 +306,255 @@ up from
     <span class="text-danger" >
         <?=isset($errors['product_name']) ? $errors['product_name'] : ""?>
     </span>
+
+------------------------------------- Class04 Product Image Upload ------------------
+
+
+1. backend\app\Database\Migrations\2022-12-26-110349_Products.php   add field
+    function up(){
+        // ....
+      'product_price' => [
+                'type' => 'DECIMAL',
+                'constraint'     => '10,2'
+            ],
+            'product_image' => [
+                'type' => 'VARCHAR',
+                'constraint'     => 100,
+                'null' => true
+            ],
+            'product_category' => [
+               'id' => 'TINYINT'
+            ],
+    }
+
+2. php spark migrate:refresh
+
+3. backend\app\Database\Seeds\ProductSeeder.php
+    add coloumn
+        'product_category' => 7
+
+    php spark db:seed productSeeder
+
+4. see blog 
+    https://www.positronx.io/codeigniter-file-upload-example-tutorial/
+
+5. backend\app\Views\product\product_entry.php
+    ** in form 
+        enctype="multipart/form-data"
+    ** new input for file
+
+            <label for="exampleInputEmail1">Product Image</label>
+            <input name="product_image" type="file" class="form-control" id="exampleInputEmail1"  value="<?= old('product_image') ?>">
+
+            <span class="text-danger" >
+                <?=isset($errors['product_image']) ? $errors['product_image'] : ""?>
+            </span>
+
+
+6. backend\app\Models\ProductModel.php
+
+    protected $allowedFields    = ['product_name','product_details','product_price','product_image', 'product_category'];
+
+
+7. validation add
+
+ $rules = [
+        //..
+        'product_image' => [
+                                'uploaded[product_image]',
+                                'mime_in[product_image,image/jpg,image/jpeg,image/png]',
+                                'max_size[product_image,1024]',
+                            ]
+        }
+
+ $errors = 
+            [
+                    'product_image' => [
+                    'uploaded' => 'Image Must be upload',
+                    'mime_in' => 'Only image/jpg,image/jpeg,image/png Allowed',
+                    'max_size' => 'Image not more than 1MB'
+                ],
+            ]
+
+// for image upload
+
+              
+
+                $model = new ProductModel();
+                
+                // for image upload
+                $img = $this->request->getFile('product_image');
+                $img->move("assets/" . 'uploads');
+                
+                 $data = [
+                    'product_name' => $this->request->getPost('product_name'),
+                    'product_details'  => $this->request->getPost('product_details'),
+                    'product_price'  => $this->request->getPost('product_price'),
+                    'product_image' =>  $img->getName(),
+
+                ];
+
+                $model->save($data);
+                return redirect()->to('/products')->with('msg', 'Created Successfully');
+            
+
+// show frontend
+    <img src="assets\uploads\fridge.jpg<?= $product['product_image'] ?>" alt="image">
+
+    OR
+
+    1. backend\app\Controllers\Products.php
+        // for image upload
+                $img = $this->request->getFile('product_image');
+                $path = "assets/" . 'uploads/';
+                $img->move($path);
+                
+                 $data = [
+                    'product_name' => $this->request->getPost('product_name'),
+                    'product_details'  => $this->request->getPost('product_details'),
+                    'product_price'  => $this->request->getPost('product_price'),
+                    $namepath = $path.$img->getName(),
+                    'product_image' =>  $namepath
+
+                ];
+
+                $model->save($data);
+                return redirect()->to('/products')->with('msg', 'Created Successfully');
+            }
+    
+    2. <img src="<?= $product['product_image'] ?>" alt="image">
+
+                ============ Update for Image upload =================
+
+1. backend\app\Views\product\product_edit.php    in form add 
+    enctype="multipart/form-data"
+
+    and add image input file
+
+2. controller
+    public function update($id = null){
+
+        $rules = [
+
+            //..
+            'product_image' => [
+                                'uploaded[product_image]',
+                                'mime_in[product_image,image/jpg,image/jpeg,image/png]',
+                                'max_size[product_image,1024]',
+                                ]
+        ];
+
+        $errors = 
+            [
+                //...
+                'product_image' => [
+                    'uploaded' => 'Image Must be upload',
+                    'mime_in' => 'Only image/jpg,image/jpeg,image/png Allowed',
+                    'max_size' => 'Image not more than 1MB'
+                ],
+        ];
+
+        $validation = $this->validate($rules, $errors);
+        
+
+        if(!$validation){
+            return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
+        }else{
+             // for image upload
+             $img = $this->request->getFile('product_image');
+             $path = "assets/uploads/";
+             $img->move($path);
+
+            $data = [
+                'product_name' => $this->request->getVar('product_name'),
+                'product_details'  => $this->request->getVar('product_details'),
+                'product_price'  => $this->request->getVar('product_price'),
+                $namepath = $path.$img->getName(),
+                'product_image' =>  $namepath
+            ];
+
+            $model = new ProductModel();
+            $model->update($id, $data);
+
+            return redirect()->to('/products')->with('msg', 'Update Successfully');
+        }
+
+                    ===== Category ====
+1. category table (id,cat_name)
+    php spark make:migration category
+
+        public function up(){
+
+        $this->forge->addField([
+            'id' => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true,
+            ],
+            'product_name' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'product_details' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+            'product_price' => [
+                'type' => 'DECIMAL',
+                'constraint'     => '10,2'
+            ],
+            'product_image' => [
+                'type' => 'VARCHAR',
+                'constraint'     => 100,
+                'null' => true
+            ],
+            'product_category' => [
+                'type' => 'TINYINT'
+            ],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('products');
+    }
+
+    public function down(){
+        $this->forge->dropTable('products');
+    }
+    
+
+2. php spark migrate
+
+3. php spark make:model categoryModel
+
+        protected $allowedFields    = ['cat_name'];
+
+4. entry form add
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Product Category</label>
+        <select name="product_category" class="form-control">
+            <option value="" selected disabled > Select One</option>
+            <option value="" > News Item</option>
+        </select> 
+    </div>
+
+5. product controller
+
+    use App\Models\CategoryModel;
+
+     public function new(){
+
+        $catmodel = new CategoryModel();
+        $data['cats'] = $catmodel->orderBy('cat_name')->findAll();
+
+        return view("product/product_entry",$data);
+    }
+
+6. product_entry.php   page loop for pull from mysql
+    <?php 
+    foreach($cats as $cat) : ?>
+        <option value="<?= $cat['id']; ?>" > <?= $cat['cat_name']; ?> </option>
+    <?php endforeach; ?>
+
+7. controller
+    'product_category'  => $this->request->getPost('product_category'),

@@ -50,7 +50,7 @@
                             }
                         ?>
                         <!-- form start --> 
-                        <form method="post" action="<?= base_url('products/update/'.$product['id'])?>" >
+                        <form method="post" action="<?= base_url('products/update/'.$product['id'])?>" enctype="multipart/form-data" >
                             
                             <div class="card-body">
                                 <div class="form-group">
@@ -82,6 +82,16 @@
                                         <?=isset($errors['product_price']) ? $errors['product_price'] : ""?>
                                     </span>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Image</label>
+                                    <input name="product_image" type="file" class="form-control" id="exampleInputEmail1" value="<?= old('product_image') ? old('product_image') : $product['product_image']?>" >
+
+                                    <span class="text-danger" >
+                                        <?=isset($errors['product_image']) ? $errors['product_image'] : ""?>
+                                    </span>
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
 
