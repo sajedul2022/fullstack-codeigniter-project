@@ -78,9 +78,9 @@
                                     <tr>
                                         <td> <?php echo $product['id'] ?> </td>
                                         <td> <?php echo $product['product_name'] ?> </td>
-                                        <?php foreach($cats as $cat) : ?>
-                                            <td> <?php echo $cat['cat_name'] ?> </td>
-                                        <?php endforeach?>                          
+                                        <?php #foreach($cats as $cat) : ?>
+                                            <td> <?php #echo $cat['cat_name'] ?> Electric </td>
+                                        <?php #endforeach?>                          
 
                                         <td><?php echo $product['product_details'] ?></td>
                                         <td> <?php echo $product['product_price'] ?> </td>
@@ -106,9 +106,11 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Product Name</th>
+                                        <th>Category</th>
                                         <th>Details</th>
                                         <th>Price</th>
-                                        <th>Action </th>
+                                        <th>Image</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                             </table>

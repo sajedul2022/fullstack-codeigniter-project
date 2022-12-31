@@ -11,6 +11,17 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/products" class="nav-link">Product</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/users/signup" class="nav-link">Registration</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/users/signin" class="nav-link">Login</a>
+      </li>
+
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?= base_url('users/logout')?>" class="nav-link">Logout</a>
+      </li>
+
     </ul>
 
     <!-- Right navbar links -->

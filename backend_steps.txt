@@ -558,3 +558,81 @@ up from
 
 7. controller
     'product_category'  => $this->request->getPost('product_category'),
+
+
+=============================== Class 05 Login Register Authentication ====================================
+
+https://www.positronx.io/codeigniter-authentication-login-and-registration-tutorial/
+
+
+1. php spark make:migration users
+    add table, column and field
+
+2. php spark migrate
+
+3. php spark make:model usersModel
+
+backend\app\Models\UsersModel.php
+    protected $allowedFields    = ['name','email','password'];
+
+4. php spark make:controller SignupController
+
+        public function index(){
+        return view('auth/signup');
+    }
+
+
+5. create view auth folder and signup.php 
+    create form template
+
+6. Routes
+    $routes->get('/users/signup', 'SignupController::index');
+    $routes->post('/users/store', 'SignupController::store');
+
+7. php spark make:controller SigninController  // login
+
+
+8. routes
+    $routes->get('/users/signin', 'SigninController::index');
+    $routes->post('/users/login', 'SigninController::loginAuth');
+
+
+9. old data
+
+     return redirect()->back()->withInput();
+    value="<?= old('email') ?>"
+
+            ============ Authentication || app/Config/Filters.php  =========
+1. php spark make:filter AuthGuard
+
+2. app/Config/Filters.php
+    'authGuard' => \App\Filters\AuthGuard::class,
+
+3. backend\app\Filters\AuthGuard.php
+
+    public function before(RequestInterface $request, $arguments = null){
+        
+        if (!session()->get('isLoggedIn')){
+            return redirect()
+                ->to('/signin');
+        }
+    }
+
+4. $routes->get('/dashboard', 'Dashboard::index',['filter' => 'authGuard']);
+
+
+                    ========  Logout ==========
+
+1. $routes->get('/users/logout', 'SigninController::logout');
+
+2. SigninController::logout
+ public function logout(){
+        
+        $sessin = session();
+        $sessin->destroy();
+        return redirect()->to('/users/signin');
+
+    }
+
+
+                ===== Group Routes ======
