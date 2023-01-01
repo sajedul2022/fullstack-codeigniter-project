@@ -6,6 +6,7 @@ use App\Database\Migrations\Category;
 use App\Models\CategoryModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\ProductModel;
+use CodeIgniter\API\ResponseTrait;
 
 class Products extends ResourceController
 {
@@ -18,6 +19,8 @@ class Products extends ResourceController
             helper(['form', 'url']);
         }
 
+    use ResponseTrait;
+
     public function index(){
         $model = new ProductModel();
         $data['products'] = $model->orderBy('id','DESC')->findAll();
@@ -27,8 +30,11 @@ class Products extends ResourceController
         // category
         $catmodel = new CategoryModel();
         $data['cats'] = $catmodel->orderBy('cat_name')->findAll();
-        
-        return view('product/product_list', $data);
+
+
+        // return view('product/product_list', $data);
+        return $this->respond($data);
+
 
     }
 

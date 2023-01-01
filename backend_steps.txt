@@ -636,3 +636,37 @@ backend\app\Models\UsersModel.php
 
 
                 ===== Group Routes ======
+
+
+
+
+
+=================== React with codeigniter ============
+https://mfikri.com/en/blog/react-crud-codeigniter
+
+
+1.php spark make:filter Cors 
+
+2. backend\app\Config\Filters.php
+
+    use App\Filters\Cors;
+    public $aliases = [
+        //..
+        'cors'          =>  Cors::class,
+    ]
+
+    public $globals = [
+        'before' => [
+            // 'honeypot',
+            // 'csrf',
+            // 'invalidchars',
+            'cors'
+        ],
+    
+3. backend\app\Controllers\Products.php
+
+    use CodeIgniter\API\ResponseTrait;
+
+    use ResponseTrait;
+
+    return $this->respond($data); // see json data

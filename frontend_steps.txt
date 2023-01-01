@@ -1,0 +1,132 @@
+----------- \fullstack-codeigniter-project -------------
+
+                     ------ Class 01 ------
+## Backend ##
+
+https://mfikri.com/en/blog/react-crud-codeigniter
+
+1.php spark make:filter Cors 
+
+2. backend\app\Config\Filters.php
+
+    use App\Filters\Cors;
+    public $aliases = [
+        //..
+        'cors'          =>  Cors::class,
+    ]
+
+    public $globals = [
+        'before' => [
+            // 'honeypot',
+            // 'csrf',
+            // 'invalidchars',
+            'cors'
+        ],
+    
+3. backend\app\Controllers\Products.php
+
+    use CodeIgniter\API\ResponseTrait;
+
+    use ResponseTrait;
+
+    return $this->respond($data); // see json data
+
+
+
+
+
+
+        ## frontend ##
+
+1. npx create-react-app frontend
+2. npm install react-router-dom
+3. npm install axios
+4. app.js
+
+    import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+    import ProductList from "./components/ProductList";
+    // import AddProduct from "./components/AddProduct";
+    // import EditProduct from "./components/EditProduct";
+    
+    function App() {
+    return (
+        <BrowserRouter>
+        <Routes>
+            <Route  path="/" element={<ProductList />}>
+            <Route index element={<ProductList />} />
+
+            {/* <Route path="/about" element={<About />} /> */}
+            
+            </Route>
+        </Routes>
+        </BrowserRouter>
+    );
+    }
+    
+    export default App;
+
+5.  frontend\src\components\ProductList.js
+
+        // * eslint-disable react-hooks/exhaustive-deps */
+
+        import React, { useState, useEffect } from 'react'
+        import axios from "axios";
+        import { Link } from "react-router-dom";
+        
+        const ProductList = () => {
+            const [products, setProducts] = useState([]);
+        
+            useEffect(() => {
+                getProducts();
+            },[]);
+        
+            const getProducts = async () => {
+                const products = await axios.get('http://localhost:8080/products');
+                setProducts(products.data.products);
+            }
+        
+            const deleteProduct = async (id) =>{
+                await axios.delete(`http://localhost:8080/products/${id}`);
+                getProducts();
+            }
+        
+            return (
+                <div>
+                    <Link to="/add" className="button is-primary mt-5">Add New</Link>
+                    <table className="table is-striped is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Details</th>
+                                <th>Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            { products.map((product, index) => (
+                                <tr key={product.id}>
+                                    <td>{index + 1}</td>
+                                    <td>{product.product_name}</td>
+                                    <td>{product.product_details}</td>
+                                    <td>{product.product_price}</td>
+                                    <td>
+                                        <Link to={`/edit/${product.id}`} className="button is-small is-info">Edit</Link>
+                                        <button onClick={() => deleteProduct(product.id)} className="button is-small is-danger">Delete</button>
+                                    </td>
+                                </tr>
+                            )) }
+                            
+        {/* id	product_name	product_details	product_price	product_image	product_category */}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+        
+        export default ProductList
+ 
+** image show
+     <img width={100} src={`http://localhost:8080/${product.product_image}`}/>
