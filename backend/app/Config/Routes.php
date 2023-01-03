@@ -46,7 +46,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'SigninController::index');
 
 $routes->get('/dashboard', 'Dashboard::index',['filter' => 'authGuard']);
-$routes->resource('Products',);
+// $routes->resource('Products',);
+$routes->Presenter('products',['filter' => 'authGuard']);
 
 // login
 $routes->get('/users/signup', 'SignupController::index');
@@ -57,6 +58,13 @@ $routes->post('/users/login', 'SigninController::loginAuth');
 
 $routes->get('/users/logout', 'SigninController::logout');
 
+// frontend React
+$routes->get('/ProductFrontend/products', 'ProductFrontend::index');
+
+// Query Builder Class
+
+$routes->get('/qb', 'Qb::index');
+$routes->get('/qb/select', 'Qb::selectqb');
 
 
 

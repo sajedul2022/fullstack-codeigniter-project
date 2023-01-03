@@ -26,14 +26,13 @@ class Products extends ResourceController
         $data['products'] = $model->orderBy('id','DESC')->findAll();
         // print_r($data);
 
-
         // category
         $catmodel = new CategoryModel();
         $data['cats'] = $catmodel->orderBy('cat_name')->findAll();
 
 
-        // return view('product/product_list', $data);
-        return $this->respond($data);
+        return view('product/product_list', $data);
+        // return $this->respond($data);
 
 
     }
@@ -113,7 +112,7 @@ class Products extends ResourceController
                 
                 // for image upload
                 $img = $this->request->getFile('product_image');
-                $path = "/assets/uploads/";
+                $path = "assets/uploads/";
                 $img->move($path);
                 
                  $data = [

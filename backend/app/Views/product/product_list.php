@@ -91,7 +91,7 @@
                                             <a class="btn btn-primary" href="<?= site_url("products/edit/".$product['id']) ?>">
                                                 <i class="fa fa-pen" ></i> &nbsp
                                             </a>  
-                                            <a class="btn btn-danger" href="products/delete/<?= $product['id'] ?>">
+                                            <a class="btn btn-danger" href="/Products/delete/<?= $product['id'] ?>">
                                                 <i class="fa fa-trash" ></i>
                                             </a>
 
