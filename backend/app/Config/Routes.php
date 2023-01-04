@@ -65,6 +65,7 @@ $routes->get('/ProductFrontend/products', 'ProductFrontend::index');
 
 $routes->get('/qb', 'Qb::index');
 $routes->get('/qb/select', 'Qb::selectqb');
+$routes->get('/qb/pratice', 'Qb::pratice');
 
 
 
