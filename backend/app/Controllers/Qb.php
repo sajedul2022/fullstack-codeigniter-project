@@ -121,6 +121,7 @@ class Qb extends BaseController{
 
         $builder = $db->table('orders');
         $select = $builder->select('customerName, city, orders.orderNumber, orderDate, products.productCode, productName, quantityOrdered, priceEach, MSRP');
+        
         $row = $select->selectSum('quantityOrdered');
         $row = $select->selectSum('priceEach');
         $row = $select->groupBy('orders.orderNumber');

@@ -26,7 +26,7 @@ class Security extends BaseConfig
      *
      * @var bool
      */
-    public $tokenRandomize = false;
+    public $tokenRandomize = true;
 
     /**
      * --------------------------------------------------------------------------

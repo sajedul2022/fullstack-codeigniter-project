@@ -762,3 +762,41 @@ https://mfikri.com/en/blog/react-crud-codeigniter
 
     ** backend\app\Config\Routes.php
         $routes->get('/qb/select', 'Qb::selectqb');
+
+        ============================== Views layouts  =======================
+1. php spark make:controller TestController
+
+        public function index(){
+        return view('pages/home_page');
+    }
+    public function about(){
+        return view('pages/about_page');
+    }
+    
+
+             ============  <?= csrf_field() ?>  Security ====================
+
+1. backend\app\Config\Filters.php
+
+     'before' => [
+            // 'honeypot',
+            'csrf',
+            // 'invalidchars',
+            'cors'
+        ],
+
+        public $methods = [
+        'get' => ['csrf'],
+        'post' => ['csrf'],
+    ];
+
+
+2. backend\app\Config\Security.php
+    public $tokenRandomize = true;
+
+3. Every Form elements
+
+    <form method="post" action="<?= base_url('products/create')?>" enctype="multipart/form-data" >
+        //...
+         <?=  csrf_field(); ?>
+    </form?

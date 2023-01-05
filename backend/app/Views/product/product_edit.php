@@ -51,7 +51,7 @@
                         ?>
                         <!-- form start --> 
                         <form method="post" action="<?= base_url('products/update/'.$product['id'])?>" enctype="multipart/form-data" >
-                            
+                        <?=  csrf_field(); ?>
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Product Name</label>

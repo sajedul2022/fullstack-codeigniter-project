@@ -115,7 +115,7 @@ class Products extends ResourceController
                 $path = "assets/uploads/";
                 $img->move($path);
                 
-                 $data = [
+                 $data = [  
                     'product_name' => $this->request->getPost('product_name'),
                     'product_details'  => $this->request->getPost('product_details'),
                     'product_price'  => $this->request->getPost('product_price'),

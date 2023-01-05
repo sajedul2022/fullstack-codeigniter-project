@@ -23,6 +23,7 @@
                     </div>
                 <?php endif;?>
                 <form action="<?php echo base_url('users/login'); ?>" method="post">
+                <?=  csrf_field(); ?>
                     <div class="form-group mb-3">
                         <input type="email" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control" >
                     </div>

@@ -67,6 +67,11 @@ $routes->get('/qb', 'Qb::index');
 $routes->get('/qb/select', 'Qb::selectqb');
 $routes->get('/qb/pratice', 'Qb::pratice');
 
+// Template layouts
+$routes->get('pages/home', 'TestController::index' );
+$routes->get('pages/about', 'TestController::about' );
+$routes->get('pages/list', 'TestController::productList' );
+
 
 
 /*
