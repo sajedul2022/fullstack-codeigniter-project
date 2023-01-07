@@ -25,7 +25,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -48,6 +48,8 @@ $routes->get('/', 'SigninController::index');
 $routes->get('/dashboard', 'Dashboard::index',['filter' => 'authGuard']);
 // $routes->resource('Products',);
 $routes->Presenter('products',['filter' => 'authGuard']);
+
+
 
 // login
 $routes->get('/users/signup', 'SignupController::index');

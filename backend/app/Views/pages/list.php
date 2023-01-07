@@ -58,13 +58,16 @@
                 </table>
 
                 <!-- Pagination -->
-                <div class="pagination justify-content-end">
-                    <?php if ($pager) : ?>
-                        <?php $pagi_path = 'index.php//pages/list'; ?>
-                        <?php $pager->setPath($pagi_path); ?>
-                        <?= $pager->links() ?>
-                    <?php endif ?>
-                </div>
+                <!-- <div class="pagination justify-content-end">
+                    <?php #if ($pager) : ?>
+                        <?php #$pagi_path = 'index.php//pages/list'; ?>
+                        <?php #$pager->setPath($pagi_path); ?>
+                        <?php # echo $pager->links() ?>
+                    <?php #endif ?>
+                    
+                </div> -->
+
+                <?php echo $pager->links('group1', 'bs_full'); ?>
 
             </div>
         </div>

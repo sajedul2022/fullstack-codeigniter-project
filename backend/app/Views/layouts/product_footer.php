@@ -36,6 +36,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/assets/dist/js/demo.js"></script>
 <!-- Page specific script -->
+
+
+
 <script>
   $(function () {
     $("#example1").DataTable({

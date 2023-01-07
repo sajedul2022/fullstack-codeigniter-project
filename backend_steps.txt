@@ -480,6 +480,7 @@ up from
         }
 
                     ===== Category ====
+                    
 1. category table (id,cat_name)
     php spark make:migration category
 
@@ -603,6 +604,7 @@ backend\app\Models\UsersModel.php
     value="<?= old('email') ?>"
 
             ============ Authentication || app/Config/Filters.php  =========
+
 1. php spark make:filter AuthGuard
 
 2. app/Config/Filters.php
@@ -641,7 +643,8 @@ backend\app\Models\UsersModel.php
 
 
 
-=================== React with codeigniter ============
+        =================== React with codeigniter ============
+
 https://mfikri.com/en/blog/react-crud-codeigniter
 
 
@@ -800,3 +803,28 @@ https://mfikri.com/en/blog/react-crud-codeigniter
         //...
          <?=  csrf_field(); ?>
     </form?
+
+        ============= Pagination =============
+1. create view folder pagers/bs_full.php
+    create pager elements Templates
+
+2. backend\app\Config\Pager.php
+        'bs_full'        => 'App\Views\Pagers\bs_full',
+
+3. controller   
+
+    public function productList(){
+
+        $model = new  ProductModel();
+        $data = [
+            'products' => $model->paginate(3, 'group1'),
+            
+            'pager' => $model->pager
+        ];
+
+        return view('pages/list', $data );
+    }
+
+
+4. show page
+                <?php echo $pager->links('group1', 'bs_full'); ?>

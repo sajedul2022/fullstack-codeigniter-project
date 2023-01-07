@@ -57,6 +57,9 @@ const ProductList = () => {
                      
                 </tbody>
             </table>
+
+            
+                            
         </div>
     )
 }

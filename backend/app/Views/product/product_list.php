@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0"><a class="btn btn-primary"  href="/products/new"> Add New Product </a> </h1>
+                    <h1 class="m-0"><a class="btn btn-primary" href="/products/new"> Add New Product </a> </h1>
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
@@ -26,11 +26,12 @@
 
                     <!-- Seesion msg -->
                     <?php
-                    
-                        if(session()->has('msg')): ?>
-                            <div class="alert alert-success">
-                                <?= session()->msg; ?>
-                            </div>
+
+                    if (session()->has('msg')) : ?>
+                        <div class="alert alert-success">
+                            <?= session()->msg; ?>
+                            
+                        </div>
                     <?php endif; ?>
 
                 </div><!-- /.col -->
@@ -73,34 +74,52 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($products as $product) : ?>
+                                    <?php foreach ($products as $product) : ?>
+
+                                        <tr>
+                                            <td> <?php echo $product['id'] ?> </td>
+                                            <td> <?php echo $product['product_name'] ?> </td>
+
+                                            
                                         
-                                    <tr>
-                                        <td> <?php echo $product['id'] ?> </td>
-                                        <td> <?php echo $product['product_name'] ?> </td>
-                                        <?php #foreach($cats as $cat) : ?>
-                                            <td> <?php #echo $cat['cat_name'] ?> Electric </td>
-                                        <?php #endforeach?>                          
+                                            <?php
+                                            foreach ($cats as $cat) :
+                                                if ($cat['id'] == $product['product_category']) :
+                                            ?>
+                                                    <td><?= $cat['cat_name'] ?></td>
+                                            <?php
+                                                endif;
+                                            endforeach;
+                                            ?>
 
-                                        <td><?php echo $product['product_details'] ?></td>
-                                        <td> <?php echo $product['product_price'] ?> </td>
-                                        <td>  
-                                            <img width="100"  src="<?= $product['product_image'] ?>" alt="image">
-                                        </td>
-                                        <td>  
-                                            <a class="btn btn-primary" href="<?= site_url("products/edit/".$product['id']) ?>">
-                                                <i class="fa fa-pen" ></i> &nbsp
-                                            </a>  
-                                            <a class="btn btn-danger" href="/Products/delete/<?= $product['id'] ?>">
-                                                <i class="fa fa-trash" ></i>
-                                            </a>
+                                            <td><?php echo $product['product_details'] ?></td>
+                                            <td> <?php echo $product['product_price'] ?> </td>
+                                            <td>
+                                                <img width="100" src="<?= $product['product_image'] ?>" alt="image">
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="<?= site_url("products/edit/" . $product['id']) ?>">
+                                                    <i class="fa fa-pen"></i> &nbsp
+                                                </a>
 
-                                        </td>
-                                        
-                                    </tr>
+                                                <form action="<?= site_url("/products/delete/".$product['id']) ?>" method="post">
+                                                    <?= csrf_field() ?>
 
-                                    <?php endforeach?>                          
-                                        <!-- id	product_name product_details product_price	 -->
+                                                    <button class="btn btn-danger" onclick="return confirm('Are you Sure want to Delete?')" type="submit" >
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </form>
+
+                                                
+                                                   
+                                                </a>
+
+                                            </td>
+
+                                        </tr>
+
+                                    <?php endforeach ?>
+                                    <!-- id	product_name product_details product_price	 -->
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -114,6 +133,11 @@
                                     </tr>
                                 </tfoot>
                             </table>
+
+                            <!-- pagination -->
+                            <?php #echo $pager->links('group1', 'bs_full'); 
+                            ?>
+
                         </div>
                         <!-- /.card-body -->
                     </div>
