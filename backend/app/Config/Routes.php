@@ -74,6 +74,12 @@ $routes->get('pages/home', 'TestController::index' );
 $routes->get('pages/about', 'TestController::about' );
 $routes->get('pages/list', 'TestController::productList' );
 
+// reporting
+$routes->get('reports/stufflist', 'ReportController::stufflist', ['filter' => 'authGuard'] );
+$routes->get('reports/allstuff', 'ReportController::allstuff', ['filter' => 'authGuard'] );
+$routes->get('reports/orderlist', 'ReportController::orderlist', ['filter' => 'authGuard'] );
+$routes->get('reports/orderquery', 'ReportController::orderQuery', ['filter' => 'authGuard'] );
+
 
 
 /*
