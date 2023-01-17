@@ -108,6 +108,15 @@
                                     <span class="text-danger" >
                                         <?=isset($errors['product_image']) ? $errors['product_image'] : ""?>
                                     </span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Quantity</label>
+                                    <input name="product_stock" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Product Stock" value="<?= old('product_stock') ?>">
+
+                                    <span class="text-danger" >
+                                        <?=isset($errors['product_stock']) ? $errors['product_stock'] : ""?>
+                                    </span>
 
                                 </div>
 

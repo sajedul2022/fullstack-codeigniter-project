@@ -38,6 +38,7 @@ const AllProduct = () => {
                 <th>Details</th>
                 <th>Price</th>
                 <th>Image</th>
+                <th>Stock</th>
               </tr>
             </thead>
             <tbody>
@@ -50,6 +51,7 @@ const AllProduct = () => {
                             <td>
                                 <img width={100} src={`http://localhost:8080/${product.product_image}`}/>
                             </td>
+                            <td>{product.product_stock}</td>
                             {/* <td>
                                 <Link to={`/edit/${product.id}`} className="btn btn-success">Edit</Link>
                                 <button onClick={() => deleteProduct(product.id)} className="btn btn-danger">Delete</button>

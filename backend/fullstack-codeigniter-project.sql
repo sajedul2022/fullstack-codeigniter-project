@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2023 at 11:25 AM
+-- Generation Time: Jan 17, 2023 at 01:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -37,10 +37,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `cat_name`) VALUES
-(1, 'Electric Item'),
-(2, 'Display Item'),
-(3, 'Sports item'),
-(4, 'Clothes');
+(1, 'Electric');
 
 -- --------------------------------------------------------
 
@@ -63,9 +60,9 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
-(5, '2022-12-26-110349', 'App\\Database\\Migrations\\Products', 'default', 'App', 1672315766, 1),
-(6, '2022-12-29-121317', 'App\\Database\\Migrations\\Category', 'default', 'App', 1672316157, 2),
-(7, '2022-12-31-091956', 'App\\Database\\Migrations\\Users', 'default', 'App', 1672479384, 3);
+(14, '2022-12-26-110349', 'App\\Database\\Migrations\\Products', 'default', 'App', 1673958474, 1),
+(15, '2022-12-29-121317', 'App\\Database\\Migrations\\Category', 'default', 'App', 1673958474, 1),
+(16, '2022-12-31-091956', 'App\\Database\\Migrations\\Users', 'default', 'App', 1673958475, 1);
 
 -- --------------------------------------------------------
 
@@ -79,21 +76,19 @@ CREATE TABLE `products` (
   `product_details` text DEFAULT NULL,
   `product_price` decimal(10,2) NOT NULL,
   `product_image` varchar(100) DEFAULT NULL,
-  `product_category` tinyint(4) NOT NULL
+  `product_category` tinyint(4) NOT NULL,
+  `product_stock` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `product_details`, `product_price`, `product_image`, `product_category`) VALUES
-(2, 'Addidas ', '    Content here                                    ', '300.00', 'assets/uploads/ledtv_5.jpg', 3),
-(3, 'watch', ' dddddddd                                    ', '300.00', 'assets/uploads/sajedul2_2.png', 3),
-(4, 'CC TV', ' Wood product                                    ', '800.00', 'assets/uploads/cctv.jpg', 2),
-(7, 'Extra 5', '  wwwwww                                                                        ', '1200.00', 'assets/uploads/sajedul_3.png', 2),
-(13, 'Shirt', 'Content here', '300.00', 'assets/uploads/warehouse_2.jpg', 4),
-(14, 'CC TV', 'Content', '800.00', 'assets/uploads/cctv_4.jpg', 1),
-(15, 'Cap', 'Content', '800.00', 'assets/uploads/warehouse_3.jpg', 4);
+INSERT INTO `products` (`id`, `product_name`, `product_details`, `product_price`, `product_image`, `product_category`, `product_stock`) VALUES
+(2, 'watch 2', ' content                                    ', '6300.00', 'assets/uploads/sajedul_2.jpeg', 1, 0),
+(3, 'I phone', ' content                                    ', '6300.00', 'assets/uploads/ledtv_6.jpg', 1, 0),
+(4, 'CC TV', 'content&nbsp;', '300.00', 'assets/uploads/cctv_5.jpg', 1, 30),
+(5, 'L dddddddddddd', 'llllllll', '300.00', 'assets/uploads/fridge_2.jpg', 1, 60);
 
 -- --------------------------------------------------------
 
@@ -135,16 +130,6 @@ CREATE TABLE `users` (
   `password` char(64) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
-(2, 'Amjad', 'amjad@gmail.com', '$2y$10$S.jaIuv8zfn/4qrKZK8pgOutLH.NJN73WL5wFc1wm3w5gc9.MAxFW', '2022-12-31 10:22:05'),
-(3, 'rakib', 'rakib@gmail.com', '$2y$10$oloech0//4TTYT2XhkCFtujuAJLgLSwEi7DY9rSeVBApp8i8N4iSK', '2022-12-31 10:48:58'),
-(4, 'Nirob', 'ni@gmail.com', '$2y$10$mzVDKq7f1iTuXxIw3Dt2v.r1mn7UFPAdGfrujvuBUBq7jfNL7mW2i', '2022-12-31 10:57:20'),
-(5, 'sajedul', 'sajedul@gmail.com', '$2y$10$iBGo6SmJO0EIRisb6bcZsOFA3vbk/2gN5f7c99xys24yz5geQS2R2', '2022-12-31 11:35:33');
 
 --
 -- Indexes for dumped tables
@@ -189,19 +174,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -213,7 +198,7 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

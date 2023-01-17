@@ -70,6 +70,7 @@
                                         <th>Details</th>
                                         <th>Price</th>
                                         <th>Image</th>
+                                        <th>Stock</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -97,6 +98,8 @@
                                             <td>
                                                 <img width="100" src="<?= $product['product_image'] ?>" alt="image">
                                             </td>
+                                            <td> <?php echo $product['product_stock'] ?> </td>
+
                                             <td>
                                                 <a class="btn btn-primary" href="<?= site_url("products/edit/" . $product['id']) ?>">
                                                     <i class="fa fa-pen"></i> &nbsp

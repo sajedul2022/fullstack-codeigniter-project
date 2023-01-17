@@ -35,6 +35,9 @@ class Products extends Migration
             'product_category' => [
                 'type' => 'TINYINT'
             ],
+            'product_stock' => [
+                'type' => 'TINYINT'
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('products');

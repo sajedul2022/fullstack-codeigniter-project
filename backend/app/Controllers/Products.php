@@ -100,6 +100,7 @@ class Products extends ResourceController
                     'mime_in' => 'Only image/jpg,image/jpeg,image/png Allowed',
                     'max_size' => 'Image not more than 1MB'
                 ],
+                
         ];
 
         $validation = $this->validate($rules, $errors);
@@ -122,6 +123,8 @@ class Products extends ResourceController
                     $namepath = $path.$img->getName(),
                     'product_image' =>  $namepath,
                     'product_category'  => $this->request->getPost('product_category'),
+                    'product_stock'  => $this->request->getPost('product_stock'),
+
 
 
                 ];
@@ -159,7 +162,9 @@ class Products extends ResourceController
                                 'uploaded[product_image]',
                                 'mime_in[product_image,image/jpg,image/jpeg,image/png]',
                                 'max_size[product_image,1024]',
-                                ]
+            ],
+            
+
         ];
 
         $errors = 
@@ -177,11 +182,13 @@ class Products extends ResourceController
                     'required' => 'Product Price Must be fill',
                     'numeric' => 'Price Must be Number'
                 ],
+                
                 'product_image' => [
                     'uploaded' => 'Image Must be upload',
                     'mime_in' => 'Only image/jpg,image/jpeg,image/png Allowed',
                     'max_size' => 'Image not more than 1MB'
                 ],
+                
         ];
 
         $validation = $this->validate($rules, $errors);
@@ -200,7 +207,9 @@ class Products extends ResourceController
                 'product_details'  => $this->request->getVar('product_details'),
                 'product_price'  => $this->request->getVar('product_price'),
                 $namepath = $path.$img->getName(),
-                'product_image' =>  $namepath
+                'product_image' =>  $namepath,
+                'product_stock'  => $this->request->getVar('product_stock'),
+
             ];
 
             $model = new ProductModel();

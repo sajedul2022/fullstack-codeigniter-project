@@ -92,6 +92,13 @@
                                     </span>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Product Stock</label>
+                                    <input name="product_stock" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Product Stock" value="<?= old('product_stock') ? old('product_stock') : $product['product_stock']?>" >
+
+                                    
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
 
