@@ -36,6 +36,11 @@
                         <button type="submit" class="btn btn-dark">Signup</button>
                     </div>
                 </form>
+
+                <div class="d-grid">
+                    <a href="<?php echo base_url('users/signin'); ?>" class="btn " >Go to Login</a>
+                </div>
+                
             </div>
         </div>
     </div>

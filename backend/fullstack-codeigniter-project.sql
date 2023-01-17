@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 01:55 PM
+-- Generation Time: Jan 17, 2023 at 11:25 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -39,7 +39,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `cat_name`) VALUES
 (1, 'Electric Item'),
 (2, 'Display Item'),
-(3, 'Sports item');
+(3, 'Sports item'),
+(4, 'Clothes');
 
 -- --------------------------------------------------------
 
@@ -86,10 +87,40 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_name`, `product_details`, `product_price`, `product_image`, `product_category`) VALUES
-(2, 'Bat', 'ddddddddddd', '300.00', '/assets/uploads/fridge.jpg', 3),
+(2, 'Addidas ', '    Content here                                    ', '300.00', 'assets/uploads/ledtv_5.jpg', 3),
 (3, 'watch', ' dddddddd                                    ', '300.00', 'assets/uploads/sajedul2_2.png', 3),
 (4, 'CC TV', ' Wood product                                    ', '800.00', 'assets/uploads/cctv.jpg', 2),
-(7, 'Extra', 'wwwwww', '1200.00', 'assets/uploads/ledtv_2.jpg', 2);
+(7, 'Extra 5', '  wwwwww                                                                        ', '1200.00', 'assets/uploads/sajedul_3.png', 2),
+(13, 'Shirt', 'Content here', '300.00', 'assets/uploads/warehouse_2.jpg', 4),
+(14, 'CC TV', 'Content', '800.00', 'assets/uploads/cctv_4.jpg', 1),
+(15, 'Cap', 'Content', '800.00', 'assets/uploads/warehouse_3.jpg', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registration`
+--
+
+CREATE TABLE `registration` (
+  `id` int(10) NOT NULL,
+  `fname` varchar(30) NOT NULL,
+  `lname` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` char(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registration` (`id`, `fname`, `lname`, `email`, `password`) VALUES
+(1, 'Sajedul', 'Islam', 'sajedul@gmail.com', '123'),
+(5, 'Amjad', 'Hossain', 'amjad@gmail.com', '123'),
+(6, 'kabir', 'hasan', 'kabir@gmail.com', '123'),
+(7, 'sakib', 'khan', 'sakib@gmail.com', '123'),
+(8, 'Tamim', 'khan', 'tamim@gmail.com', '123'),
+(9, 'dd', 'dd', 'masrafee@gmail.com', '123'),
+(10, 'ss', 'ss', 'abc@gmail.com', '123');
 
 -- --------------------------------------------------------
 
@@ -138,6 +169,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `registration`
+--
+ALTER TABLE `registration`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -152,7 +189,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -164,7 +201,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `registration`
+--
+ALTER TABLE `registration`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`

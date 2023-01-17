@@ -1,0 +1,6 @@
+
+--------------- Login Registration -------------
+1.  npx create-react-app reactjs_login_registration
+2.  npm i axios
+3.  npm i react-router-dom
+4. npm i axios

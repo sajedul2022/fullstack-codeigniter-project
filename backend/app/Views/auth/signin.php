@@ -35,6 +35,10 @@
                          <button type="submit" class="btn btn-success">Signin</button>
                     </div>     
                 </form>
+
+                <div class="d-grid">
+                    <a href="<?php echo base_url('users/signup'); ?>"  class="btn" >Create Registration</a>
+                </div>
             </div>
               
         </div>

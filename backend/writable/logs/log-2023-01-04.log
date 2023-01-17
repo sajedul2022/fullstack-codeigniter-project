@@ -1,0 +1,844 @@
+CRITICAL - 2023-01-04 15:57:36 --> Undefined property: stdClass::$product_name
+in APPPATH\Views\test.php on line 3.
+ 1 APPPATH\Views\test.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$product_name', 'APPPATH\\Views\\test.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\test.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('test', [], true)
+ 5 APPPATH\Controllers\Qb.php(95): view('test', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 15:58:14 --> Undefined variable: products
+in APPPATH\Views\test.php on line 2.
+ 1 APPPATH\Views\test.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'APPPATH\\Views\\test.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\test.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('test', [], true)
+ 5 APPPATH\Controllers\Qb.php(95): view('test', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:08:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:08:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:09:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= Sales Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:09:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= Sales Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:09:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= Sales Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:09:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= Sales Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employees`
+WHERE `jobTitle` = = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:09:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:09:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 16:09:55 --> Argument 2 passed to view() must be of the type array, object given, called in E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php on line 100
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Qb.php(100): view('pratice', Object(CodeIgniter\Database\MySQLi\Builder))
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:11:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:11:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:12:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:12:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:12:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:12:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:14:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3 in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:14:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Rep' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `jobTitle` = Sales Rep', [], false)
+ 5 APPPATH\Controllers\Qb.php(92): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:16:54 --> mysqli_sql_exception: Unknown column 'employees' in 'where clause' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:16:54 --> Unknown column 'employees' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`
+FROM `employees`
+WHERE `employees` = :employees:', [...], false)
+ 5 APPPATH\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:17:05 --> mysqli_sql_exception: Unknown column 'employees' in 'where clause' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:17:05 --> Unknown column 'employees' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employees`
+WHERE `employees` = (\'Sales Rep\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employees`
+WHERE `employees` = :employees:', [...], false)
+ 5 APPPATH\Controllers\Qb.php(94): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 16:21:36 --> mysqli_sql_exception: Unknown column 'Sales' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstNa...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstNa...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstNa...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstNa...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(97): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 16:21:36 --> Unknown column 'Sales' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `firstName`, `lastName`, `email`, `Sales` `Rep`
+FROM `employees`
+WHERE `jobTitle` = \'Sales Rep\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `firstName`, `lastName`, `email`, `Sales` `Rep`
+FROM `employees`
+WHERE `jobTitle` = \'Sales Rep\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `firstName`, `lastName`, `email`, `Sales` `Rep`
+FROM `employees`
+WHERE `jobTitle` = \'Sales Rep\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `firstName`, `lastName`, `email`, `Sales` `Rep`
+FROM `employees`
+WHERE `jobTitle` = :jobTitle:', [...], false)
+ 5 APPPATH\Controllers\Qb.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:10:19 --> mysqli_sql_exception: Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:10:19 --> Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:10:45 --> mysqli_sql_exception: Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:10:45 --> Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:10:48 --> mysqli_sql_exception: Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:10:48 --> Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:12:00 --> mysqli_sql_exception: Unknown column 'customerName' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:12:00 --> Unknown column 'customerName' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:12:18 --> mysqli_sql_exception: Column 'orderNumber' in field list is ambiguous in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `orderNu...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `orderNu...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `orderNu...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `orderNu...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:12:18 --> Column 'orderNumber' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:12:43 --> mysqli_sql_exception: Unknown column 'quantityOrder' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `status`...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `status`...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `status`...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `status`...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:12:43 --> Unknown column 'quantityOrder' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:14:12 --> mysqli_sql_exception: Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:14:12 --> Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:14:31 --> mysqli_sql_exception: Column 'orderNumber' in field list is ambiguous in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:14:31 --> Column 'orderNumber' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:17:05 --> mysqli_sql_exception: Unknown column 'quantityOrder' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:17:05 --> Unknown column 'quantityOrder' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:17:21 --> mysqli_sql_exception: Unknown column 'orderdetails.quantityOrder' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:17:21 --> Unknown column 'orderdetails.quantityOrder' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `orderdetails`.`quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `orderdetails`.`quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `orderdetails`.`quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `orderdetails`.`quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:19:16 --> mysqli_sql_exception: Unknown column 'quantityOrder' in 'field list' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:19:16 --> Unknown column 'quantityOrder' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrder`, `priceEach`
+FROM `orders`
+JOIN `customers` ON `customers`.`customerNumber`  = `orders`.`customerNumber`
+JOIN `orderdetails` ON `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:20:56 --> mysqli_sql_exception: Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:20:56 --> Table 'wdpf51_sampledb.customers,orderdetails' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers,orderdetails` ON `customers`.`customerNumber`  = `orders`.`customerNumber` and `orders`.`orderNumber` = `orderdetails`.`orderNumber`', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-04 18:21:35 --> mysqli_sql_exception: Unknown column 'orderdetails' in 'from clause' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-04 18:21:35 --> Unknown column 'orderdetails' in 'from clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers` USING (`orderdetails`)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers` USING (`orderdetails`)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers` USING (`orderdetails`)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `customerName`, `phone`, `city`, `orders`.`orderNumber`, `orderDate`, `status`, `quantityOrdered`, `priceEach`
+FROM `orders`
+JOIN `customers` USING (`orderdetails`)', [], false)
+ 5 APPPATH\Controllers\Qb.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Qb->pratice()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qb))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

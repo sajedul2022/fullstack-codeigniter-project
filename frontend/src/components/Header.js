@@ -51,7 +51,7 @@ export default function Header() {
 
               <li class="nav-item">
                 <a class="nav-link active"
-                  href="http://localhost/inventory-react-php-mysql/Inventory-Management_php">
+                  href="http://localhost:8080/users/signin">
                   {/* href="Inventory-Management_php"> */}
                     Admin
                 </a>

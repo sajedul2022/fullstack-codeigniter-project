@@ -1,0 +1,351 @@
+CRITICAL - 2023-01-08 15:48:56 --> Invalid file: reports/stuff_list.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/stuff_list.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 3 APPPATH\Controllers\ReportController.php(20): view('reports/stuff_list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 15:52:38 --> Undefined variable: products
+in APPPATH\Views\reports\stuff_list.php on line 77.
+ 1 APPPATH\Views\reports\stuff_list.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'APPPATH\\Views\\reports\\stuff_list.php', 77, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(20): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:32:36 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\ReportController.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\ReportController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ReportController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ReportController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\ReportController')
+ 5 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\ReportController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:33:21 --> Argument 2 passed to view() must be of the type array, string given, called in E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\ReportController.php on line 26
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\ReportController.php(26): view('reports/all_stuff', '2')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:33:23 --> Argument 2 passed to view() must be of the type array, string given, called in E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\ReportController.php on line 26
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\ReportController.php(26): view('reports/all_stuff', '3')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:33:24 --> Argument 2 passed to view() must be of the type array, string given, called in E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\ReportController.php on line 26
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\ReportController.php(26): view('reports/all_stuff', '5')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:35:14 --> Undefined variable: offcode
+in APPPATH\Views\reports\stuff_list.php on line 78.
+ 1 APPPATH\Views\reports\stuff_list.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: offcode', 'APPPATH\\Views\\reports\\stuff_list.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:35:53 --> Undefined variable: getcode
+in APPPATH\Views\reports\stuff_list.php on line 78.
+ 1 APPPATH\Views\reports\stuff_list.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: getcode', 'APPPATH\\Views\\reports\\stuff_list.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:01 --> Undefined variable: getcode
+in APPPATH\Views\reports\stuff_list.php on line 78.
+ 1 APPPATH\Views\reports\stuff_list.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: getcode', 'APPPATH\\Views\\reports\\stuff_list.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:14 --> syntax error, unexpected '?>'
+in APPPATH\Views\reports\stuff_list.php on line 78.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 3 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:25 --> syntax error, unexpected '?>'
+in APPPATH\Views\reports\stuff_list.php on line 78.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 3 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:35 --> Undefined variable: offices
+in APPPATH\Views\reports\stuff_list.php on line 71.
+ 1 APPPATH\Views\reports\stuff_list.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: offices', 'APPPATH\\Views\\reports\\stuff_list.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(26): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:36 --> Undefined variable: offices
+in APPPATH\Views\reports\stuff_list.php on line 71.
+ 1 APPPATH\Views\reports\stuff_list.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: offices', 'APPPATH\\Views\\reports\\stuff_list.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(26): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 16:36:37 --> Undefined variable: offices
+in APPPATH\Views\reports\stuff_list.php on line 71.
+ 1 APPPATH\Views\reports\stuff_list.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: offices', 'APPPATH\\Views\\reports\\stuff_list.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(26): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 17:27:14 --> syntax error, unexpected end of file
+in APPPATH\Views\reports\stuff_list.php on line 112.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 3 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 17:27:39 --> Undefined variable: officeWise
+in APPPATH\Views\reports\stuff_list.php on line 82.
+ 1 APPPATH\Views\reports\stuff_list.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: officeWise', 'APPPATH\\Views\\reports\\stuff_list.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 17:27:52 --> Undefined variable: officeWise
+in APPPATH\Views\reports\stuff_list.php on line 82.
+ 1 APPPATH\Views\reports\stuff_list.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: officeWise', 'APPPATH\\Views\\reports\\stuff_list.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 17:28:24 --> Undefined variable: officeWise
+in APPPATH\Views\reports\stuff_list.php on line 82.
+ 1 APPPATH\Views\reports\stuff_list.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: officeWise', 'APPPATH\\Views\\reports\\stuff_list.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stuff_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/stuff_list', [], true)
+ 5 APPPATH\Controllers\ReportController.php(19): view('reports/stuff_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->stufflist()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 17:35:26 --> Undefined index: offcode
+in APPPATH\Controllers\ReportController.php on line 24.
+ 1 APPPATH\Controllers\ReportController.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: offcode', 'APPPATH\\Controllers\\ReportController.php', 24, [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 18:38:57 --> mysqli_sql_exception: Unknown column '2003-01-06' in 'where clause' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\ReportController.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\ReportController->datewise()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-08 18:38:57 --> Unknown column '2003-01-06' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL', [], false)
+ 5 APPPATH\Controllers\ReportController.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->datewise()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 18:40:21 --> mysqli_sql_exception: Unknown column '2003-01-06' in 'where clause' in E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\fullstack-codeigniter-project\backend\app\Controllers\ReportController.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(925): App\Controllers\ReportController->datewise()
+#6 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#7 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\fullstack-codeigniter-project\backend\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\fullstack-codeigniter-project\backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-08 18:40:21 --> Unknown column '2003-01-06' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `orders`
+WHERE `orderDate` IS NULL
+AND `2003-01-06` IS NULL
+AND `2003-03-03` IS NULL', [], false)
+ 5 APPPATH\Controllers\ReportController.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->datewise()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 18:41:40 --> Undefined index: offcode
+in APPPATH\Controllers\ReportController.php on line 24.
+ 1 APPPATH\Controllers\ReportController.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: offcode', 'APPPATH\\Controllers\\ReportController.php', 24, [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 18:42:49 --> Undefined index: offcode
+in APPPATH\Controllers\ReportController.php on line 24.
+ 1 APPPATH\Controllers\ReportController.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: offcode', 'APPPATH\\Controllers\\ReportController.php', 24, [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->allstuff()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 19:15:38 --> Invalid file: reports/orderquery.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/orderquery.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/orderquery', [], true)
+ 3 APPPATH\Controllers\ReportController.php(56): view('reports/orderquery', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->orderQuery()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 19:15:40 --> Invalid file: reports/orderquery.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/orderquery.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/orderquery', [], true)
+ 3 APPPATH\Controllers\ReportController.php(56): view('reports/orderquery', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->orderQuery()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 19:15:41 --> Invalid file: reports/orderquery.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/orderquery.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/orderquery', [], true)
+ 3 APPPATH\Controllers\ReportController.php(56): view('reports/orderquery', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->orderQuery()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 19:15:41 --> Invalid file: reports/orderquery.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/orderquery.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/orderquery', [], true)
+ 3 APPPATH\Controllers\ReportController.php(56): view('reports/orderquery', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->orderQuery()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 19:15:41 --> Invalid file: reports/orderquery.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reports/orderquery.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reports/orderquery', [], true)
+ 3 APPPATH\Controllers\ReportController.php(56): view('reports/orderquery', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ReportController->orderQuery()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

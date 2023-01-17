@@ -1,25 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import './App.css';
+import { Outlet } from "react-router-dom";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
-import ProductList from "./components/ProductList";
-// import AddProduct from "./components/AddProduct";
-// import EditProduct from "./components/EditProduct";
- 
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route  path="/" element={<ProductList />}>
+    <div className="container">
 
-          {/* <Route index element={<ProductList />} /> */}
+      <Header/>
+      
+        <Outlet />
 
-          {/* <Route path="/about" element={<About />} /> */}
-          
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <Footer/>
+      
+    </div>
   );
 }
- 
+
 export default App;
- 

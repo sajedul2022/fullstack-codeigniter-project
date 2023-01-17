@@ -52,5 +52,8 @@ class ReportController extends BaseController{
         $data['orders'] = $builder->getResultArray();
 
         dd($data);
+
+        // return view('reports/orderquery', $data);
+
     }
 }
