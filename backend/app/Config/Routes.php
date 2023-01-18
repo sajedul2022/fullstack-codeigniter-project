@@ -80,6 +80,9 @@ $routes->get('reports/allstuff', 'ReportController::allstuff', ['filter' => 'aut
 $routes->get('reports/orderlist', 'ReportController::orderlist', ['filter' => 'authGuard'] );
 $routes->get('reports/orderquery', 'ReportController::orderQuery', ['filter' => 'authGuard'] );
 
+// inventory
+$routes->get('inventory/products', 'InventoryProductController::index', ['filter' => 'authGuard'] );
+
 
 
 /*

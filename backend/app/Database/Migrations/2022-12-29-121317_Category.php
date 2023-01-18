@@ -21,11 +21,11 @@ class Category extends Migration
             ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('Categories');
+        $this->forge->createTable('Categories2');
 
     }
 
     public function down(){
-        $this->forge->dropTable('Categories');
+        $this->forge->dropTable('Categories2');
     }
 }

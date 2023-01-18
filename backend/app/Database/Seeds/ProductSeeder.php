@@ -114,7 +114,7 @@ class ProductSeeder extends Seeder{
 
         // Using Query Builder
         foreach($datas as $data){
-            $this->db->table('products')->insert($data); 
+            $this->db->table('products2')->insert($data); 
         }
     }
 }
